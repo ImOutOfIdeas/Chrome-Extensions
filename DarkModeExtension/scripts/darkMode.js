@@ -3,10 +3,18 @@ const css = document.querySelector("link");
 const body = document.querySelector("body");
 const links = document.getElementsByTagName("a");
 const tables = document.getElementsByTagName("tbody")
-const tableData = document.getElementsByTagName("td");
 const headers = document.getElementsByTagName("th");
-const textAreas = document.getElementsByTagName("textarea");
 const listItems = document.getElementsByTagName("li");
+const tableData = document.getElementsByTagName("td");
+const textAreas = document.getElementsByTagName("textarea");
+
+// Body styling
+body.style.marginInline = '100px';
+body.style.overflowX = "hidden";
+body.style.fontFamily = "Inter, sans-serif";
+body.style.fontSize = "20px";
+body.style.backgroundColor = "#1E1E1E";
+body.style.color = "lightgrey";
 
 // Ensures the page has a css style before overwriting
 if (css) css.href = "https://web.cse.ohio-state.edu/software/web/syntaxhighlighter/styles/shCoreFadeToGrey.css";
@@ -49,15 +57,7 @@ for (var i = 0; i < textAreas.length; i++) {
     textAreas[i].style.backgroundColor = "#353535";
 }
 
-// List item overwrite (adds gap between directions)
+// List item overwrite (adds gap between directions for readability)
 for (var i = 0; i < listItems.length; i++) {
     listItems[i].style.marginBlock = "20px";
 }
-
-// Body styling
-body.style.marginInline = '100px';
-body.style.overflowX = "hidden";
-body.style.fontFamily = "Inter, sans-serif";
-body.style.fontSize = "20px";
-body.style.backgroundColor = "#1E1E1E";
-body.style.color = "lightgrey";
