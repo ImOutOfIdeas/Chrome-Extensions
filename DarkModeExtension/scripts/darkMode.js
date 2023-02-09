@@ -2,6 +2,7 @@
 const css = document.querySelector("link");
 const body = document.querySelector("body");
 const links = document.getElementsByTagName("a");
+const tables = document.getElementsByTagName("tbody")
 const tableData = document.getElementsByTagName("td");
 const headers = document.getElementsByTagName("th");
 const textAreas = document.getElementsByTagName("textarea");
@@ -16,14 +17,23 @@ for (var i = 0; i < headers.length; i++) {
     headers[i].style.backgroundColor = "black";
 }
 
-// Table body overwrite
+// Table body overwrite (class based)
 for (var i = 0; i < tableData.length; i++) {
-    if (tableData[i].parentNode.classList.contains("statement")) {
+    classes = tableData[i].parentNode.classList;
+
+    if (classes.contains("statement") || classes.contains("lab")) {
         tableData[i].style.color = "lightgrey";
         tableData[i].style.backgroundColor = "#353535";
-    } else {
+        tableData[i].style.backgroundImage = "none";
+    } else if (classes.contains("variables") || classes.contains("lecture")) {
         tableData[i].style.color = "lightgrey";
         tableData[i].style.backgroundColor = "#1E1E1E";
+    } else if (classes.contains("header")) {
+        tableData[i].style.color = "lightgrey";
+        tableData[i].style.backgroundColor = "black";
+    } else {
+        tableData[i].style.color = "lightgrey";
+        tableData[i].style.backgroundColor = "inherit";
     }
 }
 
