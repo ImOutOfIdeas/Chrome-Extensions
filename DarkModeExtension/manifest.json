@@ -18,7 +18,8 @@
     {
       "js": ["scripts/darkMode.js"],
       "matches": [
-        "http://web.cse.ohio-state.edu/software/2221/web-sw1/*"
+        "http://web.cse.ohio-state.edu/software/2221/*",
+        "http://web.cse.ohio-state.edu/software/2231/*"
       ]
     }
   ]
