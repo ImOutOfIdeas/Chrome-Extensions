@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Dark Mode",
+  "description": "Because doing software homework is annoying enough. It will blind you no longer!",
+  "version": "1.0",
+  "action": {
+    "default_title": "Dark Mode",
+    "default_icon": "images/BrenFace.png", 
+    "default_popup": "dark.html"
+  },
+  "icons": {
+    "16": "images/brenface-16.png",
+    "32": "images/brenface-32.png",
+    "48": "images/brenface-48.png",
+    "128": "images/brenface-128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/darkMode.js"],
+      "matches": [
+        "http://web.cse.ohio-state.edu/software/2221/web-sw1/generated/*",
+        "http://web.cse.ohio-state.edu/software/2221/web-sw1/assignments/*",
+        "http://web.cse.ohio-state.edu/software/2221/web-sw1/extras/*"
+      ]
+    }
+  ]
+}
